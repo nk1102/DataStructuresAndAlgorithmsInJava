@@ -15,6 +15,16 @@ public class SinglyLinkedList<E> implements ListADT<E> {
     }
     @Override
     public void addFirst(E element) {
+        Node<E> node = new Node<>(element);
+        if (isEmpty()) {
+            head = node;
+            tail = node;
+        } else {
+            node.setNext(head);
+            head = node;
+
+        }
+        size++;
 
     }
 
