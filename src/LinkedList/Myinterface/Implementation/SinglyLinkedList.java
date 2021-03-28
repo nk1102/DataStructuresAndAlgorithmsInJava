@@ -96,6 +96,14 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void traverse() {
+        Node<E> temp = head;
+        System.out.print("head -->");
+        while (temp != null) {
+            System.out.println(temp.getData() + "--> ");
+            temp = temp.getNext();
+
+        }
+        System.out.println("null");
 
     }
 
