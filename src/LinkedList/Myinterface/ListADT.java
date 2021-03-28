@@ -21,6 +21,22 @@ package LinkedList.Myinterface;
      */
 
     void addLast(E element);
+    /**
+     * Created removeFirst method to remove the element from the first
+     * of the linked list
+     * has the element which has to be removed from the first.
+     */
+
+    void removeFirst();
+
+    /**
+     * Created removeLast method to remove the element from the first
+     * of the linked list
+     * has the element which has to be removed from the Last.
+     *
+     */
+    void removeLast();
+
 
 
 }
