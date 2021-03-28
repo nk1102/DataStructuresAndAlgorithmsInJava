@@ -99,21 +99,22 @@ public class SinglyLinkedList<E> implements ListADT<E> {
         Node<E> temp = head;
         System.out.print("head -->");
         while (temp != null) {
-            System.out.println(temp.getData() + "--> ");
+            System.out.print(temp.getData() + "--> ");
             temp = temp.getNext();
 
         }
-        System.out.println("null");
+        System.out.print("null");
 
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+
+        return head == null;
     }
 }
