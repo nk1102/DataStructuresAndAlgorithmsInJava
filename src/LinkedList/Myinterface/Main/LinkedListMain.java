@@ -8,8 +8,8 @@ public class LinkedListMain {
         SinglyLinkedList<String> singlyLinkedList1 = new SinglyLinkedList<String>();
         singlyLinkedList.addFirst(10);
         singlyLinkedList.addFirst(20);
-        singlyLinkedList.removeLast();
         singlyLinkedList.traverse();
+        System.out.println();
         singlyLinkedList1.addFirst("Github");
         singlyLinkedList1.addFirst("Author");
         singlyLinkedList1.removeFirst();
