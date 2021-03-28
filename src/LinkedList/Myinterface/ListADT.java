@@ -37,6 +37,28 @@ package LinkedList.Myinterface;
      */
     void removeLast();
 
+    /**
+     * Created traverse method to traverse the linked list
+     * And to find all the node of the linked list
+     */
+
+    void traverse();
+
+    /**\
+     *Created size method to return the size of the linked list
+     * @return size
+     */
+
+
+    int size();
+
+    /**
+     * Created isEmpty method to check whether the linked list is empty or not
+     * @return true or false
+     */
+
+    boolean isEmpty();
+
 
 
 }
