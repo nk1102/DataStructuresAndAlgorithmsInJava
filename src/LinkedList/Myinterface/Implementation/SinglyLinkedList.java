@@ -66,6 +66,31 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void removeLast() {
+        Node<E> nodeToBeDeleted = null;
+        if (!isEmpty()){
+            nodeToBeDeleted = new Node<>(tail.getData());
+            // traversing the linked list to find the second last node
+            Node<E> temp = head;
+            Node<E> previous = null;
+            while (temp.getNext() != null){
+                previous =temp;
+                temp=temp.getNext();
+
+            }
+            if (previous == null){
+                // it means linked list has only one node
+                head = null;
+                tail = null;
+            }
+            else{
+                previous.setNext(null);
+                tail = previous;
+
+            }
+            size--;
+
+
+        }
 
     }
 
