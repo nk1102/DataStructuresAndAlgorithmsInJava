@@ -30,6 +30,17 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void addLast(E element) {
+        Node<E> node = new Node<>(element);
+        if (isEmpty()) {
+            head = node;
+            tail = node;
+            size++;
+
+        } else {
+            tail.setNext(node);
+            tail = node;
+
+        }
 
     }
 
