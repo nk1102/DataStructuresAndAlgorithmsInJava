@@ -13,6 +13,7 @@ public class SinglyLinkedList<E> implements ListADT<E> {
         size = 0;
 
     }
+
     @Override
     public void addFirst(E element) {
         Node<E> node = new Node<>(element);
@@ -46,6 +47,20 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void removeFirst() {
+        Node<E> deleted = null;
+        if (!isEmpty()) {
+            deleted = new Node<>(head.getData());
+            if (size == 1) { // special case if linked list has only one node
+                head = null;
+                tail = null;
+            } else {
+                head = head.getNext();
+
+            }
+            size--;
+
+        }
+
 
     }
 
