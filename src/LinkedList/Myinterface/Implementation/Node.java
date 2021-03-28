@@ -12,7 +12,6 @@ public class Node<E>{
 
     /**
      * Created default constructor of the class
-     * @param data
      */
 
     public Node(E data) {
