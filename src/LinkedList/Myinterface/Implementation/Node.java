@@ -19,6 +19,11 @@ public class Node<E>{
         next = null;
     }
 
+    /**
+     * Getter and setter methods
+     * for data
+     */
+
     public E getData() {
         return data;
     }
@@ -26,6 +31,12 @@ public class Node<E>{
     public void setData(E data) {
         this.data = data;
     }
+
+    /**
+     * getter and setter methods
+     * for next field
+     * @return
+     */
 
     public Node<E> getNext() {
         return next;
