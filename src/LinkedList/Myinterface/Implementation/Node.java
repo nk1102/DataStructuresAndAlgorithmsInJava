@@ -1,0 +1,23 @@
+package LinkedList.Myinterface.Implementation;
+
+public class Node<E>{
+    /**
+     * Created private field data of generic type E
+     */
+    private E data;
+    /**
+     * Created private field  next of Node<E> type
+     */
+    private Node<E> next;
+
+    /**
+     * Created default constructor of the class
+     * @param data
+     */
+
+    public Node(E data) {
+        this.data = data;
+        next=null;
+    }
+
+}
