@@ -1,20 +1,20 @@
 package LinkedList.Myinterface.Implementation;
 
-public class Node<E>{
+public class SinglyLinkedListNode<E>{
     /**
      * Created private field data of generic type E
      */
     private E data;
     /**
-     * Created private field  next of Node<E> type
+     * Created private field  next of SinglyLinkedListNode<E> type
      */
-    private Node<E> next;
+    private SinglyLinkedListNode<E> next;
 
     /**
      * Created default constructor of the class
      */
 
-    public Node(E data) {
+    public SinglyLinkedListNode(E data) {
         this.data = data;
         next = null;
     }
@@ -38,11 +38,11 @@ public class Node<E>{
      * @return
      */
 
-    public Node<E> getNext() {
+    public SinglyLinkedListNode<E> getNext() {
         return next;
     }
 
-    public void setNext(Node<E> next) {
+    public void setNext(SinglyLinkedListNode<E> next) {
         this.next = next;
     }
 }
