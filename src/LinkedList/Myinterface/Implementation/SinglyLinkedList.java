@@ -3,8 +3,8 @@ package LinkedList.Myinterface.Implementation;
 import LinkedList.Myinterface.ListADT;
 
 public class SinglyLinkedList<E> implements ListADT<E> {
-    private SinglyLinkedListNode<E> head;
-    private SinglyLinkedListNode<E> tail;
+    private Node<E> head;
+    private Node<E> tail;
     private int size;
 
     public SinglyLinkedList() {
@@ -16,13 +16,13 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void addFirst(E element) {
-        SinglyLinkedListNode<E> singlyLinkedListNode = new SinglyLinkedListNode<>(element);
+        Node<E> node = new Node<>(element);
         if (isEmpty()) {
-            head = singlyLinkedListNode;
-            tail = singlyLinkedListNode;
+            head = node;
+            tail = node;
         } else {
-            singlyLinkedListNode.setNext(head);
-            head = singlyLinkedListNode;
+            node.setNext(head);
+            head = node;
 
         }
         size++;
@@ -31,15 +31,15 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void addLast(E element) {
-        SinglyLinkedListNode<E> singlyLinkedListNode = new SinglyLinkedListNode<>(element);
+        Node<E> node = new Node<>(element);
         if (isEmpty()) {
-            head = singlyLinkedListNode;
-            tail = singlyLinkedListNode;
+            head = node;
+            tail = node;
             size++;
 
         } else {
-            tail.setNext(singlyLinkedListNode);
-            tail = singlyLinkedListNode;
+            tail.setNext(node);
+            tail = node;
 
         }
 
@@ -47,9 +47,9 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void removeFirst() {
-        SinglyLinkedListNode<E> deleted = null;
+        Node<E> deleted = null;
         if (!isEmpty()) {
-            deleted = new SinglyLinkedListNode<>(head.getData());
+            deleted = new Node<>(head.getData());
             if (size == 1) { // special case if linked list has only one node
                 head = null;
                 tail = null;
@@ -66,12 +66,12 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void removeLast() {
-        SinglyLinkedListNode<E> singlyLinkedListNodeToBeDeleted = null;
+        Node<E> nodeToBeDeleted = null;
         if (!isEmpty()){
-            singlyLinkedListNodeToBeDeleted = new SinglyLinkedListNode<>(tail.getData());
+            nodeToBeDeleted = new Node<>(tail.getData());
             // traversing the linked list to find the second last node
-            SinglyLinkedListNode<E> temp = head;
-            SinglyLinkedListNode<E> previous = null;
+            Node<E> temp = head;
+            Node<E> previous = null;
             while (temp.getNext() != null){
                 previous =temp;
                 temp=temp.getNext();
@@ -96,7 +96,7 @@ public class SinglyLinkedList<E> implements ListADT<E> {
 
     @Override
     public void traverse() {
-        SinglyLinkedListNode<E> temp = head;
+        Node<E> temp = head;
         System.out.print("head -->");
         while (temp != null) {
             System.out.print(temp.getData() + "--> ");
